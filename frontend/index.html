@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Employees</h1>
+    <h2>List of Employees</h2>
+    <ul id="list-employees"></ul>
+    <form action="" method="get" id="search">
+        <input type="text" placeholder="Enter first name..." id="search-input">
+        <input type="submit" value="Search and View Employee">
+    </form>
+
+    <h2>Add Employee</h2>
+    <form method="post" id="add-form">
+        <input type="text" placeholder="First name" id="add-firstname">
+        <input type="text" placeholder="Last name" id="add-lastname">
+        <input type="text" placeholder="Age" id="add-age">
+        Married?<input type="checkbox" id="add-married">
+        <input type="submit" placeholder="addEmployee" value="Add Employee">
+    </form>
+
+
+    <h2>Edit Employee</h2>
+    <form action="" method="put" id="edit-form">
+        <input type="text" placeholder="First name" id="edit-firstname">
+        <input type="text" placeholder="Last name" id="edit-lastname">
+        <input type="text" placeholder="Age" id="edit-age">
+        Married?<input type="checkbox" id="edit-married">
+        <input type="submit" value="Edit Employee">
+    </form>
+
+
+    <h2>View Employee/s Info</h2>
+    <div class="info">
+        <p id="info-firstName">First name : </p>
+        <p id="info-lastName">Last name : </p>
+        <p id="info-age">Age : </p>
+        <p id="info-married">Married : </p>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
