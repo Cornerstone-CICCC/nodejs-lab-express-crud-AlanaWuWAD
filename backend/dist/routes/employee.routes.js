@@ -25,9 +25,8 @@ empolyeeRouter.get("/", (req, res) => {
 });
 //search (http://localhost:3500/employees/search?firstname=john))
 empolyeeRouter.get("/search", (req, res) => {
-    console.log(`query`, req.query);
     const { firstname } = req.query;
-    const employeeFound = employees.filter(user => user.firstname.toLocaleLowerCase() === (firstname === null || firstname === void 0 ? void 0 : firstname.toLocaleString()));
+    const employeeFound = employees.filter(user => user.firstname.toLowerCase().includes(firstname.toLowerCase()));
     if (employeeFound.length === 0) {
         res.status(404).send(`Not found!`);
         return;
@@ -41,7 +40,7 @@ empolyeeRouter.get('/:id', (req, res) => {
     if (!employee) {
         res.status(404).send(`Not Found!!!!`);
     }
-    res.status(200).send('we can find it ~ ');
+    res.status(200).json(employee);
 });
 //Add employee
 empolyeeRouter.post("/", (req, res) => {
